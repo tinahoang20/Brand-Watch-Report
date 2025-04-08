@@ -1,16 +1,16 @@
-brand,post_id,post_date,content
-Coke,post_1,2024-11-01,Enjoy the refreshing taste of Coke!
-Pepsi,post_2,2024-11-08,Pepsi brings people together.
-Fanta,post_3,2024-11-15,Fanta is all about fun and fruity flavor.
-Coke,post_4,2024-11-22,Share a Coke with your loved ones.
-Pepsi,post_5,2024-11-29,Pepsi Max - Maximum taste, no sugar.
-Fanta,post_6,2024-12-06,Orange you glad it's Fanta?
-Coke,post_7,2024-12-13,Celebrate every moment with Coca-Cola.
-Pepsi,post_8,2024-12-20,Pepsi – the choice of a new generation.
-Fanta,post_9,2024-12-27,Sip into something more colorful with Fanta.
-Coke,post_10,2025-01-03,New Coke Zero Sugar - try it now!
-Pepsi,post_11,2025-01-10,Pepsi and snacks – perfect combo!
-Fanta,post_12,2025-01-17,Fanta’s flavor explosion awaits you.
-Coke,post_13,2025-01-24,Ice-cold Coke on a hot day hits different.
-Pepsi,post_14,2025-01-31,Feel the fizz with Pepsi.
-Fanta,post_15,2025-02-07,Get playful with Fanta.
+brand,post_id,post_date,content,likes,comments,shares,sentiment
+Coke,post_1,2024-11-01,"Enjoy the refreshing taste of Coke!",250,18,12,positive
+Pepsi,post_2,2024-11-08,"Pepsi brings people together.",300,25,20,positive
+Fanta,post_3,2024-11-15,"Fanta is all about fun and fruity flavor.",210,15,10,positive
+Coke,post_4,2024-11-22,"Share a Coke with your loved ones.",270,20,15,positive
+Pepsi,post_5,2024-11-29,"Pepsi Max - Maximum taste, no sugar.",180,10,8,neutral
+Fanta,post_6,2024-12-06,"Orange you glad it's Fanta?",220,12,9,positive
+Coke,post_7,2024-12-13,"Celebrate every moment with Coca-Cola.",260,22,14,positive
+Pepsi,post_8,2024-12-20,"Pepsi – the choice of a new generation.",310,30,25,positive
+Fanta,post_9,2024-12-27,"Sip into something more colorful with Fanta.",230,17,11,positive
+Coke,post_10,2025-01-03,"New Coke Zero Sugar - try it now!",200,14,10,neutral
+Pepsi,post_11,2025-01-10,"Pepsi and snacks – perfect combo!",290,24,16,positive
+Fanta,post_12,2025-01-17,"Fanta’s flavor explosion awaits you.",240,19,13,positive
+Coke,post_13,2025-01-24,"Ice-cold Coke on a hot day hits different.",275,21,18,positive
+Pepsi,post_14,2025-01-31,"Feel the fizz with Pepsi.",260,18,12,positive
+Fanta,post_15,2025-02-07,"Get playful with Fanta.",225,15,9,positive
