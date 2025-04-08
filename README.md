@@ -18,10 +18,10 @@ To simulate a **real-world data challenge** at Ogilvy:
 Brand-Watch-Report/
 │
 ├── notebooks/
-│   ├── 01_crawl_script.ipynb        # (In [1]–[8]) Crawl Facebook content of Coke, Pepsi, and Fanta
-│   ├── 02_content_analysis.ipynb    # (In [1]–[12]) Clean + analyze word frequency, topics, engagement
-│   ├── 03_brand_comparison.ipynb    # (In [1]–[10]) Compare content strategy across brands
-│   └── 04_final_report.ipynb        # (In [1]–[7]) Final insights, visuals, and recommendations
+│   ├── 01_crawl_script.ipynb        # (In [1]–[7]) Crawl Facebook content of Coke, Pepsi, and Fanta
+│   ├── 02_content_analysis.ipynb    # (In [8]–[14]) Clean + analyze word frequency, topics, engagement
+│   ├── 03_brand_comparison.ipynb    # (In [15]–[7]) Compare content strategy across brands
+│   └── 04_final_report.ipynb        # (In [18]) Final insights, visuals, and recommendations
 │
 ├── streamlit_app/
 │   └── app.py                        # Interactive dashboard for exploration
