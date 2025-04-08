@@ -1,34 +1,16 @@
-import pandas as pd
-
-# Create sample combined data for Coke, Pepsi, and Fanta
-data = {
-    "brand": ["Coke", "Pepsi", "Fanta"] * 5,
-    "post_id": [f"post_{i}" for i in range(1, 16)],
-    "post_date": pd.date_range(start="2024-11-01", periods=15, freq="7D"),
-    "content": [
-        "Enjoy the refreshing taste of Coke!",
-        "Pepsi brings people together.",
-        "Fanta is all about fun and fruity flavor.",
-        "Share a Coke with your loved ones.",
-        "Pepsi Max - Maximum taste, no sugar.",
-        "Orange you glad it's Fanta?",
-        "Celebrate every moment with Coca-Cola.",
-        "Pepsi – the choice of a new generation.",
-        "Sip into something more colorful with Fanta.",
-        "New Coke Zero Sugar - try it now!",
-        "Pepsi and snacks – perfect combo!",
-        "Fanta’s flavor explosion awaits you.",
-        "Ice-cold Coke on a hot day hits different.",
-        "Feel the fizz with Pepsi.",
-        "Get playful with Fanta."
-    ]
-}
-
-df_combined = pd.DataFrame(data)
-
-# Save to CSV
-output_path = "/mnt/data/combined_cleaned_data.csv"
-df_combined.to_csv(output_path, index=False)
-
-output_path
-
+brand,post_id,post_date,content
+Coke,post_1,2024-11-01,Enjoy the refreshing taste of Coke!
+Pepsi,post_2,2024-11-08,Pepsi brings people together.
+Fanta,post_3,2024-11-15,Fanta is all about fun and fruity flavor.
+Coke,post_4,2024-11-22,Share a Coke with your loved ones.
+Pepsi,post_5,2024-11-29,Pepsi Max - Maximum taste, no sugar.
+Fanta,post_6,2024-12-06,Orange you glad it's Fanta?
+Coke,post_7,2024-12-13,Celebrate every moment with Coca-Cola.
+Pepsi,post_8,2024-12-20,Pepsi – the choice of a new generation.
+Fanta,post_9,2024-12-27,Sip into something more colorful with Fanta.
+Coke,post_10,2025-01-03,New Coke Zero Sugar - try it now!
+Pepsi,post_11,2025-01-10,Pepsi and snacks – perfect combo!
+Fanta,post_12,2025-01-17,Fanta’s flavor explosion awaits you.
+Coke,post_13,2025-01-24,Ice-cold Coke on a hot day hits different.
+Pepsi,post_14,2025-01-31,Feel the fizz with Pepsi.
+Fanta,post_15,2025-02-07,Get playful with Fanta.
