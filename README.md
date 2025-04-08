@@ -18,10 +18,10 @@ To simulate a **real-world data challenge** at Ogilvy:
 Brand-Watch-Report/
 │
 ├── notebooks/
-│   ├── 01_web_crawling.ipynb         # Crawl Facebook content of Coke, Pepsi, and Fanta
-│   ├── 02_content_analysis.ipynb     # Clean + analyze word frequency, topics
-│   ├── 03_brand_comparison.ipynb     # Compare content strategy across brands
-│   └── 04_sentiment_trends.ipynb     # Sentiment analysis over time
+│   ├── 01_crawl_script.ipynb        # (In [1]–[8]) Crawl Facebook content of Coke, Pepsi, and Fanta
+│   ├── 02_content_analysis.ipynb    # (In [1]–[12]) Clean + analyze word frequency, topics, engagement
+│   ├── 03_brand_comparison.ipynb    # (In [1]–[10]) Compare content strategy across brands
+│   └── 04_final_report.ipynb        # (In [1]–[7]) Final insights, visuals, and recommendations
 │
 ├── streamlit_app/
 │   └── app.py                        # Interactive dashboard for exploration
@@ -70,9 +70,11 @@ Brand-Watch-Report/
 
 Hi! I'm **Tina Hoàng**, a passionate data & marketing analyst with a focus on storytelling, content strategy, and digital insights.
 
-> 📬 [LinkedIn](https://www.linkedin.com/in/im-hoangngocanh/) | ✨ `#DataWithPurpose` | 🧠 Built for Ogilvy
+> 📬 [LinkedIn](https://www.linkedin.com/in/your-profile) | ✨ `#DataWithPurpose` | 🧠 Built for Ogilvy
+
 
 ---
+
 
 ## 📬 Contact
 
