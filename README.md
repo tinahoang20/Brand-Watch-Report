@@ -23,27 +23,35 @@ This project simulates a real-world marketing analysis challenge by **transformi
 
 ```
 Brand-Watch-Report/
-├── data/                       # Cleaned & combined datasets
+│
+├── data/                         # Cleaned & categorized datasets
 │   ├── crawl_coke_data.csv
 │   ├── crawl_pepsi_data.csv
 │   ├── crawl_fanta_data.csv
 │   ├── content_analysis.csv
-│   └── content_with_sentiment.csv
+│   ├── content_with_sentiment.csv
+│   ├── combined_cleaned_data.csv
+│   └── facebook_categorized.csv
 │
-├── notebooks/                 # Modular notebooks per analysis step
-│   ├── 01_crawl_script.ipynb
-│   ├── 02_content_analysis.ipynb
-│   ├── 03_brand_comparison.ipynb
-│   ├── 04_sentiment_analysis.ipynb
-│   └── 05_final_summary.ipynb
+├── notebooks/                    # Modular notebooks per analysis step
+│   ├── 01_web_crawling.ipynb           # Crawl social media data
+│   ├── 02_content_analysis.ipynb       # Word count, frequency, wordcloud
+│   ├── 03_brand_comparison.ipynb       # Compare timing, formats, metrics
+│   ├── 04_sentiment_analysis.ipynb     # TextBlob-based sentiment tagging
+│   ├── 05_content_categorization.ipynb # Tag posts into 4 content pillars
+│   └── 06_final_summary.ipynb          # Brand insights + strategy
 │
-├── streamlit_app/             # Interactive dashboard app
+├── streamlit_app/               # Interactive dashboard for showcasing insights
 │   └── app.py
 │
-├── assets/                    # Screenshots for README
+├── reports/                     # Exportable reports (PDF, slides)
+│   ├── Brand_Watch_Report_Ogilvy.pdf
+│   └── Key_Insights_Slides.pdf
+│
+├── assets/                      # Screenshots for README
 │   └── demo_dashboard.png
 │
-├── requirements.txt
+├── requirements.txt             # Python dependencies
 └── README.md
 ```
 
