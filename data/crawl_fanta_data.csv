@@ -1,5 +1,10 @@
 post_id,date,content,reactions,comments,shares,post_type,sentiment
-1,2024-11-02,"Bursting with fruity fun",1578,134,47,Image,Positive
-2,2025-01-10,"Taste the colorful side of life",1333,102,44,Image,Positive
-3,2025-03-02,"Summer flavors are here!",1246,93,35,Photo,Positive
-
+1,2024-11-05,"Fanta – Fruity fun starts now!",988,85,28,Photo,Positive
+2,2024-11-20,"Feeling bubbly with Fanta",1110,92,36,Image,Positive
+3,2024-12-10,"Let the fizz take over!",1042,78,30,Text,Neutral
+4,2024-12-24,"Color up your Christmas with Fanta",1220,100,42,Photo,Positive
+5,2025-01-12,"Orange vibes all day long!",1135,88,35,Video,Positive
+6,2025-02-01,"Weekend fun fueled by Fanta!",974,74,25,Image,Neutral
+7,2025-02-14,"Share a Fanta, share the love 💛",1288,96,40,Photo,Positive
+8,2025-03-08,"Refreshing your spring moments",1066,83,29,Text,Positive
+9,2025-03-20,"Bright, bold, Fanta!",1150,90,34,Image,Positive
