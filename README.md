@@ -50,12 +50,13 @@ git clone https://github.com/tinahoang20/Brand-Watch-Report.git
 cd Brand-Watch-Report
 pip install -r requirements.txt
 streamlit run streamlit_app/app.py
+---
 🌐 Or deploy via Streamlit Cloud
-
+---
 📊 Dashboard Preview
 Example View:
 
-
+---
 
 🛠 Tools & Libraries
 Python (Pandas, NumPy, Seaborn, TextBlob, Scikit-learn)
