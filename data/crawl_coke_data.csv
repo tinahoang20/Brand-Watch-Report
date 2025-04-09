@@ -1,5 +1,11 @@
 post_id,date,content,reactions,comments,shares,post_type,sentiment
 1,2024-11-01,"Sharing new year joy in Hanoi!",1254,102,33,Image,Positive
-2,2024-12-05,"Let’s celebrate together",1684,156,61,Video,Positive
-3,2025-01-15,"Lunar New Year vibes",2001,174,76,Video,Positive
-4,2025-03-20,"Moments made refreshing",1672,142,52,Video,Positive
+2,2024-11-15,"Open happiness with every Coke",1190,95,28,Photo,Positive
+3,2024-12-01,"A toast to the festive season 🥂",1345,120,45,Video,Positive
+4,2024-12-24,"Make it a magical Christmas with Coke",1450,132,50,Photo,Positive
+5,2025-01-01,"New Year, new traditions, same great taste",1550,140,60,Video,Positive
+6,2025-01-20,"Lunar New Year starts with Coca-Cola",1688,150,62,Photo,Positive
+7,2025-02-10,"Feel the fizz, feel the fun",1130,90,32,Image,Neutral
+8,2025-02-28,"Keep the good vibes going",980,78,27,Text,Neutral
+9,2025-03-10,"Every moment is better with Coke",1320,110,38,Image,Positive
+10,2025-03-25,"Taste the feeling – anytime, anywhere",1405,125,41,Photo,Positive
