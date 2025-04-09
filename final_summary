@@ -1,0 +1,65 @@
+# 📊 Ogilvy Brand Watch Report – Final Summary
+
+This notebook summarizes all findings from our analysis of 3 beverage brands on Facebook Vietnam:
+**Coca-Cola**, **Pepsi**, and **Fanta**, from **Nov 2024 to Mar 2025**.
+
+---
+
+## 🧩 I. Content Categorization
+
+| Content Pillar       | Description                                 | Brands using it                |
+|----------------------|---------------------------------------------|--------------------------------|
+| 🍾 Storytelling       | Emotional stories, festive moments          | Coke, Fanta                    |
+| 🎁 Promotion          | Discount, Giveaway, Mini-game               | Pepsi, Fanta                   |
+| 🧑‍🤝‍🧑 UGC & Testimonial | Highlighting customers, influencer quotes    | Pepsi, Coke                    |
+| 📅 Cultural Relevance | Tết, Valentine’s Day, Holidays              | Coke, Pepsi, Fanta             |
+
+---
+
+## 📈 II. Performance Overview
+
+| Brand | Strengths                                               | Weaknesses                                           | Engagement Highlights             |
+|-------|----------------------------------------------------------|------------------------------------------------------|-----------------------------------|
+| Coke  | Strong brand voice, visual identity, cultural alignment | Repetitive format, low CTA variation                 | Highest during Tết (2,001 likes)  |
+| Pepsi | Creative promotions, Gen Z-focused messaging            | Tone inconsistency, mid-week drop in engagement      | Best-performing: Mini game posts  |
+| Fanta | Vibrant visuals, playful tone                           | Irregular posting, lacks deeper storytelling         | #FantaFun got viral (47 shares)   |
+
+---
+
+## 📊 III. Engagement & Sentiment Insights
+
+- **Best time to post**: 18:00–21:00 (Coke & Pepsi), 15:00–18:00 (Fanta)
+- **Format analysis**:
+  - Video content generates 23% more engagement
+  - Hashtags improve performance: e.g., `#Tết`, `#PepsiParty`
+- **Sentiment distribution**:
+  - Positive: 72%
+  - Neutral: 25%
+  - Negative: 3% (mostly from unclear promo mechanics)
+
+---
+
+## 💡 IV. Strategic Recommendations for F&B Client
+
+### ✅ What Works:
+- Consistent brand tone = strong audience connection
+- Creative, gamified promotions increase interaction (Pepsi)
+- Playful, colorful messaging appeals to Gen Z (Fanta)
+
+### ⚠️ What to Avoid:
+- Over-reliance on hard-selling promos
+- Unclear call-to-action leads to lower performance
+- Irregular posting loses momentum
+
+### 📌 Recommendations:
+| Area                | Suggested Strategy                                                               |
+|---------------------|----------------------------------------------------------------------------------|
+| Tone of Voice       | Playful but purposeful, clear emotional touchpoints                              |
+| Content Mix         | 30% storytelling, 70% promotional mix                                            |
+| Posting Time        | Post during peak hours (6–9PM), weekends                                        |
+| Hashtag Strategy    | Blend branded + seasonal hashtags (e.g., `#TasteTheMoment`, `#Tết2025`)         |
+| Format Optimization | Add more short-form videos, user testimonials, campaign series posts             |
+
+---
+
+✅ This report can support our client in shaping their own winning digital content strategy based on competitive benchmarks.
