@@ -1,22 +1,7 @@
-import pandas as pd
-import csv
+### 📈 Strategic Learnings (Overview Table)
 
-# Giả sử bạn đã có DataFrame df
-data = {
-    "brand": ["Coke", "Pepsi", "Fanta"],
-    "date": ["2025-03-01", "2025-03-01", "2025-03-01"],
-    "post_text": [
-        'Enjoy "Coke" with friends, laughter, and sunshine!',
-        'Pepsi: The taste that refreshes every moment.',
-        'Fanta – fruity fun in every bubble!'
-    ],
-    "likes": [1230, 980, 456],
-    "comments": [120, 95, 30],
-    "shares": [80, 70, 25],
-    "sentiment": ["positive", "positive", "positive"]
-}
-
-df = pd.DataFrame(data)
-
-# Save file with proper quoting and escaping
-df.to_csv("combined_cleaned_data.csv", index=False, quoting=csv.QUOTE_ALL, escapechar='\\')
+| Brand | Strengths                            | Weaknesses                              | Strategy Suggestion                              |
+|-------|--------------------------------------|------------------------------------------|--------------------------------------------------|
+| **Coke** | Consistent tone, strong UGC         | Limited emotional storytelling            | Add more storytelling / campaign variety         |
+| **Pepsi** | Engaging campaigns, strong visuals | Slightly negative sentiment in some posts| Improve tone, personalize content                |
+| **Fanta** | Fun tone, strong brand identity     | Less frequency, inconsistent formats      | Standardize content, leverage trending formats   |
