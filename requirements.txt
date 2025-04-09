@@ -1,1 +1,21 @@
+# Create a basic requirements.txt file with all used packages
+
+requirements = """
+pandas
+numpy
+seaborn
+matplotlib
+streamlit
+selenium
+nltk
+textblob
+wordcloud
+scikit-learn
+"""
+
+with open("/mnt/data/requirements.txt", "w") as f:
+    f.write(requirements.strip())
+
+"/mnt/data/requirements.txt"
+
 
