@@ -1,27 +1,19 @@
-post_id,date,content,reactions,comments,shares,post_type,sentiment
-1,2024-11-02,"Bringing you freshness daily",942,78,25,Video,Neutral
-2,2024-11-10,"Stay refreshed with Pepsi this weekend!",1124,102,30,Image,Positive
-3,2024-12-05,"Pepsi Challenge returns this December!",1320,118,49,Event,Positive
-4,2024-12-25,"Celebrate your holiday with Pepsi",1588,144,60,Photo,Positive
-5,2025-01-10,"New Year, New Pepsi Vibe",1402,110,40,Video,Neutral
-6,2025-02-14,"Pepsi and love for Valentine’s Day",1215,100,38,Text,Positive
-7,2025-03-01,"Join the fun – #PepsiParty",1345,122,41,Photo,Positive
-8,2025-03-15,"Keep it cool with Pepsi",1278,97,33,Image,Neutral
-
 import pandas as pd
-from facebook_scraper import get_posts
+from facebook_scraper import get_posts, set_cookies
 from textblob import TextBlob
 from datetime import datetime, timedelta
 import os, random
+from IPython.display import display  # ✅ Cho bảng đẹp
 
-# Config
+# --- Configuration ---
 BRAND = "Pepsi"
-DATE_START = datetime(2024, 11, 1)
-DATE_END = datetime(2025, 3, 31)
-OUT_PATH = "data/crawl_pepsi_data.csv"
+PAGE_NAME = "Pepsivietnam"
+START_DATE = datetime(2024, 11, 1)
+END_DATE = datetime(2025, 3, 31)
+OUTPUT_PATH = "data/crawl_pepsi_data.csv"
 os.makedirs("data", exist_ok=True)
 
-# Sentiment function
+# --- Sentiment analysis ---
 def get_sentiment(text):
     if not text:
         return "Neutral"
@@ -33,53 +25,52 @@ def get_sentiment(text):
     else:
         return "Neutral"
 
-# Guess post type
+# --- Post type guess ---
 def guess_post_type(text, platform):
-    if platform == "YouTube":
-        return "video"
-    if platform == "Instagram":
-        return random.choice(["image", "reel", "video"])
+    if platform == "YouTube": return "video"
+    if platform == "Instagram": return random.choice(["reel", "image", "video"])
     if platform == "Facebook":
-        if "video" in text.lower() or "xem" in text.lower():
-            return "video"
-        elif len(text.split()) > 50:
-            return "text"
-        else:
-            return "image"
+        if "video" in text.lower(): return "video"
+        elif len(text.split()) > 50: return "text"
+        else: return "image"
     return "text"
 
-# Facebook Official Crawl
+# --- Facebook real crawling (with cookies) ---
 def crawl_facebook_pepsi():
-    fb_data = []
-    for post in get_posts("Pepsivietnam", pages=20, extra_info=True):
-        time = post.get("time")
-        if time and DATE_START <= time <= DATE_END:
-            text = post.get("text", "").strip()
-            fb_data.append({
-                "brand": BRAND,
-                "platform": "Facebook",
-                "post_id": post.get("post_id"),
-                "time": time.strftime("%Y-%m-%d %H:%M:%S"),
-                "content": text,
-                "likes": post.get("likes", 0),
-                "comments": post.get("comments", 0),
-                "shares": post.get("shares", 0),
-                "reactions": sum([post.get("likes", 0), post.get("comments", 0), post.get("shares", 0)]),
-                "post_type": guess_post_type(text, "Facebook"),
-                "sentiment": get_sentiment(text),
-                "post_url": post.get("post_url", "")
-            })
-    return pd.DataFrame(fb_data)
+    print("🔍 Crawling Facebook...")
+    set_cookies("cookies.json")  # Upload file cookies.json
+    posts = []
+    for post in get_posts(PAGE_NAME, pages=20, extra_info=True):
+        date = post.get("time")
+        if not date or date < START_DATE: break
+        if date > END_DATE: continue
+        text = post.get("text", "").strip()
+        posts.append({
+            "brand": BRAND,
+            "platform": "Facebook",
+            "post_id": post.get("post_id"),
+            "time": date.strftime("%Y-%m-%d %H:%M:%S"),
+            "content": text,
+            "likes": post.get("likes", 0),
+            "comments": post.get("comments", 0),
+            "shares": post.get("shares", 0),
+            "reactions": sum([post.get("likes", 0), post.get("comments", 0), post.get("shares", 0)]),
+            "post_type": guess_post_type(text, "Facebook"),
+            "sentiment": get_sentiment(text),
+            "post_url": post.get("post_url", "")
+        })
+    return pd.DataFrame(posts)
 
-# Instagram Mock (since official crawling not allowed)
+# --- Instagram mock ---
 def simulate_instagram_pepsi():
-    ig_data = []
+    print("🎨 Simulating Instagram...")
+    data = []
     for i in range(20):
-        t = DATE_START + timedelta(days=i * 5)
-        text = f"Pepsi vibes on Instagram #{i} – Stay fresh! #PepsiVibes"
-        likes = random.randint(400, 1200)
-        comments = random.randint(20, 100)
-        ig_data.append({
+        t = START_DATE + timedelta(days=i * 5)
+        text = f"Pepsi IG mock post #{i} – #PepsiVibes"
+        likes = random.randint(300, 1200)
+        comments = random.randint(20, 80)
+        data.append({
             "brand": BRAND,
             "platform": "Instagram",
             "post_id": f"pepsi_ig_{i}",
@@ -93,18 +84,19 @@ def simulate_instagram_pepsi():
             "sentiment": get_sentiment(text),
             "post_url": f"https://www.instagram.com/pepsivietnam/posts/{i}"
         })
-    return pd.DataFrame(ig_data)
+    return pd.DataFrame(data)
 
-# YouTube Mock (without API Key)
+# --- YouTube mock ---
 def simulate_youtube_pepsi():
-    yt_data = []
+    print("🎬 Simulating YouTube...")
+    data = []
     for i in range(10):
-        t = DATE_START + timedelta(days=i * 10)
-        text = f"Watch Pepsi's new campaign #{i} on YouTube: Refresh the World"
-        likes = random.randint(800, 3000)
-        comments = random.randint(50, 200)
-        shares = random.randint(20, 100)
-        yt_data.append({
+        t = START_DATE + timedelta(days=i * 10)
+        text = f"Watch Pepsi YouTube Campaign #{i}"
+        likes = random.randint(1000, 3000)
+        comments = random.randint(40, 150)
+        shares = random.randint(10, 50)
+        data.append({
             "brand": BRAND,
             "platform": "YouTube",
             "post_id": f"pepsi_yt_{i}",
@@ -118,19 +110,45 @@ def simulate_youtube_pepsi():
             "sentiment": get_sentiment(text),
             "post_url": f"https://www.youtube.com/watch?v=pepsi_mock_{i}"
         })
-    return pd.DataFrame(yt_data)
+    return pd.DataFrame(data)
 
-# Export all
+# --- Merge & Export ---
 def export_all():
     fb_df = crawl_facebook_pepsi()
     ig_df = simulate_instagram_pepsi()
     yt_df = simulate_youtube_pepsi()
-    full_df = pd.concat([fb_df, ig_df, yt_df], ignore_index=True)
-    full_df.to_csv(OUT_PATH, index=False, encoding="utf-8-sig")
-    print(f"✅ File saved: {OUT_PATH} ({len(full_df)} rows)")
-    return full_df
+    df = pd.concat([fb_df, ig_df, yt_df], ignore_index=True)
+    df['time'] = pd.to_datetime(df['time'])
+    df = df.sort_values(by='time')
+    df.to_csv(OUTPUT_PATH, index=False, encoding='utf-8-sig')
+    print(f"✅ File saved to {OUTPUT_PATH} ({len(df)} rows)")
+    return df
 
-# Run
+# --- Run & display ---
 if __name__ == "__main__":
-    export_all()
+    df = export_all()
 
+    # ✅ Hiển thị bảng rõ ràng
+    styled_df = (
+        df[['time', 'platform', 'content', 'likes', 'comments', 'shares', 'reactions', 'sentiment']]
+        .sort_values(by='time', ascending=False)
+        .head(30)
+        .style.set_caption("📋 Top Pepsi Posts (Nov 2024 – Mar 2025)")
+        .format({
+            "likes": "{:,.0f}",
+            "comments": "{:,.0f}",
+            "shares": "{:,.0f}",
+            "reactions": "{:,.0f}"
+        })
+        .set_properties(**{
+            'background-color': '#f9f9f9',
+            'border': '1px solid #ccc',
+            'text-align': 'left',
+            'padding': '8px'
+        })
+        .set_table_styles([
+            {'selector': 'th', 'props': [('text-align', 'center'), ('background-color', '#ececec')]}
+        ])
+    )
+
+    display(styled_df)
