@@ -14,10 +14,10 @@ Fanta,post_12,2025-01-17,"Fanta’s flavor explosion awaits you.",240,19,13,posi
 Coke,post_13,2025-01-24,"Ice-cold Coke on a hot day hits different.",275,21,18,positive
 Pepsi,post_14,2025-01-31,"Feel the fizz with Pepsi.",260,18,12,positive
 Fanta,post_15,2025-02-07,"Get playful with Fanta.",225,15,9,positive
-
+---
 import pandas as pd
 
-# Dữ liệu mẫu đã được chuẩn hóa
+# Sample cleaned data mimicking combined content from Coke, Pepsi, and Fanta
 data = {
     "brand": ["Coke", "Coke", "Pepsi", "Pepsi", "Fanta", "Fanta"],
     "date": ["2025-03-01", "2025-03-02", "2025-03-01", "2025-03-03", "2025-03-01", "2025-03-04"],
@@ -35,8 +35,11 @@ data = {
     "sentiment": ["positive", "positive", "neutral", "positive", "positive", "positive"]
 }
 
-df = pd.DataFrame(data)
+df_cleaned = pd.DataFrame(data)
 
-# Lưu file CSV với format an toàn để upload lên GitHub
-df.to_csv("combined_cleaned_data.csv", index=False, quoting=1, escapechar='\\')
+# Save to CSV with safe quoting and escaping
+output_path = "/mnt/data/combined_cleaned_data.csv"
+df_cleaned.to_csv(output_path, index=False, quoting=1, escapechar='\\')
+output_path
+
 
