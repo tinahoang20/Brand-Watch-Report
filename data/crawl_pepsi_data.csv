@@ -1,0 +1,6 @@
+index,brand,platform,post_id,time,content,likes,comments,shares,reactions,post_type,sentiment,post_url
+0,Pepsi,YouTube,yo_0,2024-12-24 00:00:00,Mock post #0 by Pepsi on YouTube,818,48,28,894,video,Neutral,https://youtube.com/pepsi/post/0
+1,Pepsi,Facebook,fa_1,2025-02-11 00:00:00,Mock post #1 by Pepsi on Facebook,409,164,48,621,video,Neutral,https://facebook.com/pepsi/post/1
+2,Pepsi,YouTube,yo_2,2025-01-13 00:00:00,Mock post #2 by Pepsi on YouTube,1422,61,83,1566,video,Neutral,https://youtube.com/pepsi/post/2
+3,Pepsi,YouTube,yo_3,2024-11-03 00:00:00,Mock post #3 by Pepsi on YouTube,1031,63,80,1174,video,Neutral,https://youtube.com/pepsi/post/3
+4,Pepsi,Instagram,in_4,2024-11-29 00:00:00,Mock post #4 by Pepsi on Instagram,686,135,0,821,video,Neutral,https://instagram.com/pepsi/post/4
