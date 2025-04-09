@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Brand Watch Dashboard", layout="wide")
 
 # Load data
-df = pd.read_csv("../data/content_with_sentiment.csv")
+df = pd.read_csv("data/content_with_sentiment.csv")
 df['post_date'] = pd.to_datetime(df['post_date'])
 
 # Sidebar filters
