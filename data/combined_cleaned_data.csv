@@ -1,28 +1,22 @@
 import pandas as pd
+import csv
 
-# Sample cleaned data mimicking combined content from Coke, Pepsi, and Fanta
+# Giả sử bạn đã có DataFrame df
 data = {
-    "brand": ["Coke", "Coke", "Pepsi", "Pepsi", "Fanta", "Fanta"],
-    "date": ["2025-03-01", "2025-03-02", "2025-03-01", "2025-03-03", "2025-03-01", "2025-03-04"],
+    "brand": ["Coke", "Pepsi", "Fanta"],
+    "date": ["2025-03-01", "2025-03-01", "2025-03-01"],
     "post_text": [
-        "Refreshing moments with Coke!",
-        "Enjoy every sip with family 🍽️",
-        "New Pepsi campaign is here!",
-        "What’s your favorite Pepsi memory?",
-        "Fanta makes your day brighter!",
-        "Try our new Fanta flavor today!"
+        'Enjoy "Coke" with friends, laughter, and sunshine!',
+        'Pepsi: The taste that refreshes every moment.',
+        'Fanta – fruity fun in every bubble!'
     ],
-    "likes": [1200, 980, 1150, 890, 450, 510],
-    "comments": [150, 100, 130, 120, 45, 55],
-    "shares": [80, 70, 90, 60, 20, 30],
-    "sentiment": ["positive", "positive", "neutral", "positive", "positive", "positive"]
+    "likes": [1230, 980, 456],
+    "comments": [120, 95, 30],
+    "shares": [80, 70, 25],
+    "sentiment": ["positive", "positive", "positive"]
 }
 
-df_cleaned = pd.DataFrame(data)
+df = pd.DataFrame(data)
 
-# Save to CSV with safe quoting and escaping
-output_path = "/mnt/data/combined_cleaned_data.csv"
-df_cleaned.to_csv(output_path, index=False, quoting=1, escapechar='\\')
-output_path
-
-
+# Save file with proper quoting and escaping
+df.to_csv("combined_cleaned_data.csv", index=False, quoting=csv.QUOTE_ALL, escapechar='\\')
