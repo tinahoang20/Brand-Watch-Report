@@ -1,68 +1,70 @@
-# 🌟 Ogilvy Data Assignment – User Segmentation & Strategic Insights
+# 🚀 Brand Watch Report – Ogilvy Data Assignment
 
-Welcome to my submission for the **Ogilvy Vietnam Data Assignment**.  
-This repository showcases a structured and strategic approach to analyzing user data, understanding audience segments, and translating data into actionable insights to power future marketing strategies.
-
----
-
-## 📌 Objective
-
-To simulate a **real-world data challenge** at Ogilvy:  
-> **“Transform complex audience data into compelling insights to shape future brand strategies.”**
+> **Facebook + Instagram Performance Analysis** of Coca-Cola, Pepsi & Fanta  
+> 📍 Vietnam | 📆 Nov 2024 – Mar 2025 | 🔍 Real Social Data | 💼 Built for Ogilvy Vietnam
 
 ---
 
-## 📁 Project Structure
-
-```
-Brand-Watch-Report/
-│
-├── notebooks/
-│   ├── 01_crawl_script.ipynb        # (In [1]–[7]) Crawl Facebook content of Coke, Pepsi, and Fanta
-│   ├── 02_content_analysis.ipynb    # (In [8]–[14]) Clean + analyze word frequency, topics, engagement
-│   ├── 03_brand_comparison.ipynb    # (In [15]–[7]) Compare content strategy across brands
-│   └── 04_final_report.ipynb        # (In [18]) Final insights, visuals, and recommendations
-│
-├── streamlit_app/
-│   └── app.py                        # Interactive dashboard for exploration
-│
-├── data/
-│   ├── crawl_coke_data.csv
-│   ├── crawl_pepsi_data.csv
-│   ├── crawl_fanta_data.csv
-│   └── combined_cleaned_data.csv
-│
-├── README.md                         # This file!
-└── requirements.txt                  # Python dependencies
-```
+![Dashboard Preview](https://github.com/tinahoang20/Brand-Watch-Report/blob/main/assets/demo_dashboard.png)
 
 ---
 
-## ✨ Key Features
+## 📌 Project Objective
 
-| Area                         | Highlights                                                                 |
-|-----------------------------|----------------------------------------------------------------------------|
-| **🔸 Data Crawling**          | Automated with Selenium to collect posts from each brand's official page   |
-| **📊 Content Insights**       | Top keywords, topics, engagement patterns by brand                        |
-| **📈 Brand Comparison**       | Strategic benchmarking across tone, content types, and frequency          |
-| **💬 Sentiment Analysis**     | How consumer sentiment varies across time and campaigns                   |
-| **🧠 Strategic Learning**     | Key recommendations for Ogilvy & its clients on positioning and tone      |
-| **📱 Streamlit Dashboard**    | Fully interactive for real-time filtering and brand exploration            |
+To simulate a **real Ogilvy client assignment** by transforming social media performance data into compelling, strategic brand insights:
+
+- Crawl, clean, and categorize Facebook content
+- Quantify user sentiment, post types, and engagement
+- Deliver actionable comparisons & content strategy suggestions
 
 ---
 
-## 🚀 Live Demo (Optional)
+## 📁 Repository Structure
 
-> Coming soon via [Streamlit Cloud](https://streamlit.io/cloud)  
-> (Or clone and run locally with `streamlit run app.py`)
+Brand-Watch-Report/ ├── notebooks/ # Jupyter Notebooks (modular per phase) │ ├── 01_crawl_script.ipynb │ ├── 02_content_analysis.ipynb │ ├── 03_brand_comparison.ipynb │ ├── 04_sentiment_analysis.ipynb │ └── 05_final_summary.ipynb ├── data/ # Cleaned and enriched datasets ├── streamlit_app/ # Interactive dashboard │ └── app.py ├── assets/ # Screenshot(s) for README display ├── requirements.txt └── README.md
+
+yaml
+Copy
+Edit
 
 ---
 
-## 📌 Tools & Libraries
+## ✨ Key Features & Metrics
 
-- Python, Pandas, NLTK, Plotly, Seaborn
-- WordCloud, BeautifulSoup, Selenium
-- Streamlit (for app interface)
+| Area                     | Highlights                                                                  |
+|--------------------------|-----------------------------------------------------------------------------|
+| 🔍 Data Crawling         | Selenium automation from official brand pages                              |
+| 📊 Content Analysis      | Word count, hashtags, word clouds, post type classification                 |
+| 💬 Sentiment Detection   | TextBlob-based polarity analysis (positive / neutral / negative)            |
+| 📈 Engagement Metrics     | Simulated likes, comments, shares + calculated Engagement Rate              |
+| 🧠 Strategic Insights     | Brand-wise recommendations based on tone, timing, & content effectiveness  |
+| 📱 Streamlit Dashboard    | Interactive visualization with filters for brand & time                    |
+
+---
+
+## 🧪 How to Run the Project
+
+> ✅ Run locally:
+```bash
+git clone https://github.com/tinahoang20/Brand-Watch-Report.git
+cd Brand-Watch-Report
+pip install -r requirements.txt
+streamlit run streamlit_app/app.py
+🌐 Or deploy via Streamlit Cloud
+
+📊 Dashboard Preview
+Example View:
+
+
+
+🛠 Tools & Libraries
+Python (Pandas, NumPy, Seaborn, TextBlob, Scikit-learn)
+
+Selenium (Web Crawling Facebook)
+
+Streamlit (Web App)
+
+NLTK, WordCloud, Matplotlib
 
 ---
 
