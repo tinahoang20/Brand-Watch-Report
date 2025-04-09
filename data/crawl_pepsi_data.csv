@@ -1,5 +1,9 @@
 post_id,date,content,reactions,comments,shares,post_type,sentiment
 1,2024-11-02,"Bringing you freshness daily",942,78,25,Video,Neutral
-2,2024-12-20,"Refresh your day",1142,89,19,Text,Neutral
-3,2025-02-12,"Chill with Pepsi moments",978,64,18,Image,Neutral
-
+2,2024-11-10,"Stay refreshed with Pepsi this weekend!",1124,102,30,Image,Positive
+3,2024-12-05,"Pepsi Challenge returns this December!",1320,118,49,Event,Positive
+4,2024-12-25,"Celebrate your holiday with Pepsi",1588,144,60,Photo,Positive
+5,2025-01-10,"New Year, New Pepsi Vibe",1402,110,40,Video,Neutral
+6,2025-02-14,"Pepsi and love for Valentine’s Day",1215,100,38,Text,Positive
+7,2025-03-01,"Join the fun – #PepsiParty",1345,122,41,Photo,Positive
+8,2025-03-15,"Keep it cool with Pepsi",1278,97,33,Image,Neutral
