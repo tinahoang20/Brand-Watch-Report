@@ -1,45 +1,11 @@
-# streamlit_app/app.py
-
-import streamlit as st
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-st.set_page_config(page_title="Brand Watch Dashboard", layout="wide")
-
-# Load data
-df = pd.read_csv("data/content_with_sentiment.csv")
-df['post_date'] = pd.to_datetime(df['post_date'])
-
-# Sidebar filters
-st.sidebar.title("🔎 Filter Options")
-brand = st.sidebar.selectbox("Select Brand", df['brand'].unique())
-start_date = st.sidebar.date_input("From Date", df['post_date'].min())
-end_date = st.sidebar.date_input("To Date", df['post_date'].max())
-
-# Filtered DataFrame
-filtered = df[(df['brand'] == brand) &
-              (df['post_date'] >= pd.to_datetime(start_date)) &
-              (df['post_date'] <= pd.to_datetime(end_date))]
-
-st.title(f"📊 {brand} Analysis Dashboard")
-
-col1, col2 = st.columns(2)
-with col1:
-    st.subheader("🗳 Sentiment Distribution")
-    st.bar_chart(filtered['sentiment'].value_counts())
-
-with col2:
-    st.subheader("🔥 Engagement Over Time")
-    daily = filtered.set_index('post_date').resample('W')['engagement'].sum()
-    st.line_chart(daily)
-
-st.subheader("🏷️ Top Hashtags")
-hashtags = filtered['content'].str.findall(r"#\\w+").explode()
-st.dataframe(hashtags.value_counts().head(10).reset_index().rename(columns={'index': 'Hashtag', 0: 'Count'}))
-
-st.subheader("✨ Most Engaging Post")
-top_post = filtered.sort_values('engagement', ascending=False).iloc[0]
-st.write(f"**Date:** {top_post['post_date'].strftime('%Y-%m-%d')}  \n**Engagement:** {int(top_post['engagement'])}")
-st.info(top_post['content'])
-
+post_id,brand,date,content,likes,comments,shares,sentiment
+1,Coke,2024-11-01,"Sharing new year joy in Hanoi!",1254,102,33,Positive
+2,Pepsi,2024-11-02,"Bringing you freshness daily",942,78,25,Neutral
+3,Fanta,2024-11-02,"Bursting with fruity fun",1578,134,47,Positive
+4,Coke,2024-12-01,"A toast to the festive season 🥂",1345,120,45,Positive
+5,Pepsi,2024-12-20,"Refresh your day",1142,89,19,Neutral
+6,Fanta,2025-01-10,"Taste the colorful side of life",1333,102,44,Positive
+7,Coke,2025-01-20,"Lunar New Year starts with Coca-Cola",1688,150,62,Positive
+8,Pepsi,2025-02-14,"Pepsi and love for Valentine’s Day",1215,100,38,Positive
+9,Fanta,2025-03-02,"Summer flavors are here!",1246,93,35,Positive
+10,Coke,2025-03-20,"Taste the feeling – anytime, anywhere",1405,125,41,Positive
