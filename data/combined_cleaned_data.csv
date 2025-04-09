@@ -1,7 +1,50 @@
-### 📈 Strategic Learnings (Overview Table)
+import pandas as pd
+from faker import Faker
+import random
 
-| Brand | Strengths                            | Weaknesses                              | Strategy Suggestion                              |
-|-------|--------------------------------------|------------------------------------------|--------------------------------------------------|
-| **Coke** | Consistent tone, strong UGC         | Limited emotional storytelling            | Add more storytelling / campaign variety         |
-| **Pepsi** | Engaging campaigns, strong visuals | Slightly negative sentiment in some posts| Improve tone, personalize content                |
-| **Fanta** | Fun tone, strong brand identity     | Less frequency, inconsistent formats      | Standardize content, leverage trending formats   |
+# Set up Faker and seed
+fake = Faker()
+Faker.seed(42)
+random.seed(42)
+
+# Brands and post types
+brands = ['Coke', 'Pepsi', 'Fanta']
+post_types = ['Photo', 'Video', 'Text', 'Image']
+sentiments = ['Positive', 'Neutral', 'Negative']
+
+# Generate sample posts from Nov 2024 to Mar 2025
+date_ranges = pd.date_range(start='2024-11-01', end='2025-03-31')
+data = []
+
+post_id = 1
+for date in date_ranges:
+    for _ in range(random.randint(1, 3)):  # 1 to 3 posts per day
+        brand = random.choice(brands)
+        content = fake.sentence(nb_words=10)
+        reactions = random.randint(100, 2000)
+        comments = random.randint(10, 200)
+        shares = random.randint(5, 100)
+        post_type = random.choice(post_types)
+        sentiment = random.choice(sentiments)
+        
+        data.append({
+            "post_id": post_id,
+            "brand": brand,
+            "date": date.strftime('%Y-%m-%d'),
+            "content": content,
+            "reactions": reactions,
+            "comments": comments,
+            "shares": shares,
+            "post_type": post_type,
+            "sentiment": sentiment
+        })
+        post_id += 1
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Save to CSV
+csv_path = "/mnt/data/combined_cleaned_data_extended.csv"
+df.to_csv(csv_path, index=False)
+
+csv_path
