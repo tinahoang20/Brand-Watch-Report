@@ -1,1 +1,28 @@
+import matplotlib.pyplot as plt
+
+# Create a fake dashboard demo image
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.axis("off")
+ax.set_title("📊 Brand Watch Dashboard Preview", fontsize=16, weight='bold')
+
+# Simulated chart elements
+ax.text(0.05, 0.8, "🔘 Filter: Brand = Pepsi | Date: Nov–Mar", fontsize=12)
+ax.text(0.05, 0.7, "🗳 Sentiment Distribution:", fontsize=12, weight='bold')
+ax.barh(['Positive', 'Neutral', 'Negative'], [65, 25, 10], color=['green', 'gray', 'red'])
+
+ax.text(0.05, 0.45, "🔥 Engagement Over Time (weekly)", fontsize=12, weight='bold')
+ax.plot([1, 2, 3, 4, 5], [400, 520, 480, 510, 600], marker='o', label="Pepsi Engagement", color='blue')
+ax.legend(loc="lower right")
+
+ax.text(0.05, 0.2, "🏷️ Top Hashtags: #Pepsi, #Refresh, #Challenge", fontsize=11)
+ax.text(0.05, 0.1, "✨ Most Engaging Post: \"Taste the fun with Pepsi Max!\"", fontsize=11)
+
+# Save image
+demo_path = "/mnt/data/demo_dashboard.png"
+plt.tight_layout()
+plt.savefig(demo_path, bbox_inches='tight')
+plt.close()
+
+demo_path
+
 
