@@ -59,6 +59,10 @@ Brand-Watch-Report/
 | 📈 **Engagement Metrics**| Simulated metrics for likes, shares, comments |
 | 🧠 **Strategic Insights**| Data-backed content & tone recommendations |
 | 📱 **Streamlit Dashboard**| Real-time interactive filtering and insights |
+## 📘 Strategic Report
+
+> 📂 View full insights and recommendations → [summary/strategic_insights.md](summary/strategic_insights.md)
+
 
 ---
 
