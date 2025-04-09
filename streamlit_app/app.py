@@ -12,10 +12,10 @@ st.title("📊 Brand Watch Report – Coke, Pepsi & Fanta")
 # ----------------------------
 # Load Data
 # ----------------------------
-data_path = os.path.join("..", "data", "combined_cleaned_data.csv")
+data_path = os.path.join("data", "combined_cleaned_data.csv")
 
 if not os.path.exists(data_path):
-    st.error("❌ Data file not found at ../data/combined_cleaned_data.csv")
+    st.error("❌ Data file not found at data/combined_cleaned_data.csv")
     st.stop()
 
 # Read and process data
