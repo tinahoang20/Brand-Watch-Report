@@ -1,1 +1,5 @@
-
+post_id,date,content,reactions,comments,shares,post_type,sentiment
+1,2024-11-01,"Sharing new year joy in Hanoi!",1254,102,33,Image,Positive
+2,2024-12-05,"Let’s celebrate together",1684,156,61,Video,Positive
+3,2025-01-15,"Lunar New Year vibes",2001,174,76,Video,Positive
+4,2025-03-20,"Moments made refreshing",1672,142,52,Video,Positive
