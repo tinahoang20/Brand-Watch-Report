@@ -1,22 +1,11 @@
-import pandas as pd
-data = [
-    [1, "Coke",  "2024-11-01", 'Sharing new year joy in Hanoi!', 1254, 102, 33, "Photo", "Positive"],
-    [2, "Pepsi", "2024-11-02", 'Bringing you freshness daily', 942, 78, 25, "Video", "Neutral"],
-    [3, "Fanta", "2024-11-02", 'Bursting with "fruity" fun', 1578, 134, 47, "Image", "Positive"],
-    [4, "Coke",  "2024-12-05", 'Let’s celebrate together', 1684, 156, 61, "Video", "Positive"],
-    [5, "Pepsi", "2024-12-20", 'Refresh your day', 1142, 89, 19, "Text", "Neutral"],
-    [6, "Fanta", "2025-01-10", 'Taste the colorful side of life', 1333, 102, 44, "Image", "Positive"],
-    [7, "Coke",  "2025-01-15", 'Lunar New Year vibes', 2001, 174, 76, "Video", "Positive"],
-    [8, "Pepsi", "2025-02-12", 'Chill with Pepsi moments', 978, 64, 18, "Image", "Neutral"],
-    [9, "Fanta", "2025-03-02", 'Summer flavors are here!', 1246, 93, 35, "Photo", "Positive"],
-    [10, "Coke", "2025-03-20", 'Moments made refreshing', 1672, 142, 52, "Video", "Positive"]
-]
-
-columns = ["post_id", "brand", "date", "content", "reactions", "comments", "shares", "post_type", "sentiment"]
-df = pd.DataFrame(data, columns=columns)
-
-# Ghi ra file CSV với quoting phù hợp để tránh lỗi hiển thị trên GitHub
-file_path = "/mnt/data/combined_cleaned_data.csv"
-df.to_csv(file_path, index=False, quoting=1)  # quoting=1 tương đương csv.QUOTE_ALL
-
-file_path
+post_id,brand,date,content,reactions,comments,shares,post_type,sentiment
+1,Coke,2024-11-01,"Sharing new year joy in Hanoi!",1254,102,33,Photo,Positive
+2,Pepsi,2024-11-02,"Bringing you freshness daily",942,78,25,Video,Neutral
+3,Fanta,2024-11-02,"Bursting with ""fruity"" fun",1578,134,47,Image,Positive
+4,Coke,2024-12-05,"Let’s celebrate together",1684,156,61,Video,Positive
+5,Pepsi,2024-12-20,"Refresh your day",1142,89,19,Text,Neutral
+6,Fanta,2025-01-10,"Taste the colorful side of life",1333,102,44,Image,Positive
+7,Coke,2025-01-15,"Lunar New Year vibes",2001,174,76,Video,Positive
+8,Pepsi,2025-02-12,"Chill with Pepsi moments",978,64,18,Image,Neutral
+9,Fanta,2025-03-02,"Summer flavors are here!",1246,93,35,Photo,Positive
+10,Coke,2025-03-20,"Moments made refreshing",1672,142,52,Video,Positive
