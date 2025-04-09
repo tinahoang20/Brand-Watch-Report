@@ -1,1 +1,12 @@
+post_id,brand,date,content,word_count,hashtags,post_length,post_type
+1,Coke,2024-11-01,"Sharing new year joy in Hanoi!",6,"['#joy', '#hanoi']",6,Storytelling
+2,Pepsi,2024-11-02,"Bringing you freshness daily",4,"['#pepsi', '#fresh']",4,Promo
+3,Fanta,2024-11-02,"Bursting with fruity fun",4,"['#fanta', '#fun']",4,Storytelling
+4,Coke,2024-12-05,"Let’s celebrate together",3,"['#celebrate']",3,Storytelling
+5,Pepsi,2024-12-20,"Refresh your day",3,"['#refresh']",3,Promo
+6,Fanta,2025-01-10,"Taste the colorful side of life",6,"['#taste', '#fanta']",6,Storytelling
+7,Coke,2025-01-15,"Lunar New Year vibes",4,"['#newyear']",4,Storytelling
+8,Pepsi,2025-02-12,"Chill with Pepsi moments",5,"['#chill', '#pepsi']",5,UGC
+9,Fanta,2025-03-02,"Summer flavors are here!",5,"['#summer']",5,Promo
+10,Coke,2025-03-20,"Moments made refreshing",4,"['#refreshing']",4,Storytelling
 
