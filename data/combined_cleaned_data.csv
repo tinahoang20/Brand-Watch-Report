@@ -16,51 +16,27 @@ Pepsi,post_14,2025-01-31,"Feel the fizz with Pepsi.",260,18,12,positive
 Fanta,post_15,2025-02-07,"Get playful with Fanta.",225,15,9,positive
 
 import pandas as pd
-import numpy as np
-import re
-from datetime import datetime
 
-# Load crawled CSVs
-coke = pd.read_csv("data/crawl_coke_data.csv")
-pepsi = pd.read_csv("data/crawl_pepsi_data.csv")
-fanta = pd.read_csv("data/crawl_fanta_data.csv")
+# Dữ liệu mẫu đã được chuẩn hóa
+data = {
+    "brand": ["Coke", "Coke", "Pepsi", "Pepsi", "Fanta", "Fanta"],
+    "date": ["2025-03-01", "2025-03-02", "2025-03-01", "2025-03-03", "2025-03-01", "2025-03-04"],
+    "post_text": [
+        "Refreshing moments with Coke!",
+        "Enjoy every sip with family 🍽️",
+        "New Pepsi campaign is here!",
+        "What’s your favorite Pepsi memory?",
+        "Fanta makes your day brighter!",
+        "Try our new Fanta flavor today!"
+    ],
+    "likes": [1200, 980, 1150, 890, 450, 510],
+    "comments": [150, 100, 130, 120, 45, 55],
+    "shares": [80, 70, 90, 60, 20, 30],
+    "sentiment": ["positive", "positive", "neutral", "positive", "positive", "positive"]
+}
 
-# Combine and format
-df = pd.concat([coke, pepsi, fanta], ignore_index=True)
-df['post_date'] = pd.to_datetime(df['post_date'], errors='coerce')
-df = df.dropna(subset=['post_date', 'content'])
-df = df[df['post_date'].between('2024-11-01', '2025-03-31')]
+df = pd.DataFrame(data)
 
-# Word count
-df['word_count'] = df['content'].apply(lambda x: len(str(x).split()))
+# Lưu file CSV với format an toàn để upload lên GitHub
+df.to_csv("combined_cleaned_data.csv", index=False, quoting=1, escapechar='\\')
 
-# Hashtag extraction
-df['hashtags'] = df['content'].apply(lambda x: re.findall(r"#\\w+", str(x).lower()))
-
-# Posting hour
-df['hour'] = df['post_date'].dt.hour
-
-# Post type classification
-def classify_post(text):
-    text = str(text).lower()
-    if any(word in text for word in ['promotion', 'deal', 'giảm', 'discount']):
-        return 'Promo'
-    elif any(word in text for word in ['contest', 'giveaway', 'event']):
-        return 'Event'
-    elif any(word in text for word in ['ugc', 'your story', 'khách hàng']):
-        return 'UGC'
-    else:
-        return 'Storytelling'
-
-df['post_type'] = df['content'].apply(classify_post)
-
-# Simulated engagement metrics
-np.random.seed(42)
-df['likes'] = np.random.randint(100, 500, size=len(df))
-df['comments'] = np.random.randint(10, 50, size=len(df))
-df['shares'] = np.random.randint(5, 30, size=len(df))
-df['engagement'] = df['likes'] + df['comments'] + df['shares']
-
-# Save final combined cleaned dataset
-df.to_csv("data/combined_cleaned_data.csv", index=False)
-print("✅ combined_cleaned_data.csv saved successfully.")
