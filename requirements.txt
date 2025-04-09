@@ -1,5 +1,12 @@
 streamlit
 pandas
+numpy
 matplotlib
+seaborn
 plotly
 scikit-learn
+textblob
+wordcloud
+beautifulsoup4
+requests
+lxml
