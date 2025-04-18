@@ -1,21 +1,34 @@
-# 🚀 Brand Watch Report – Ogilvy Data Assignment
-
-**Facebook + Instagram Performance Analysis** of **Coca-Cola**, **Pepsi** & **Fanta**  
+# 🚀 Brand Watch Report – Coca-Cola vs Pepsi vs Fanta (Vietnam) 
 📍 Vietnam | 🗓️ Nov 2024 – Mar 2025 | 💼 Built for Ogilvy Vietnam
 
 ---
 
-![Brand Watch Dashboard](https://github.com/tinahoang20/Brand-Watch-Report/blob/main/assets/demo_dashboard.png)
+<p align="center">
+  <img src="https://github.com/tinahoang20/Brand-Watch-Report/assets/demo_image.png" alt="Brand Watch Demo" width="80%" />
+</p>
 
----
+## 📌 Overview & Research Objectives
 
-## 📌 Project Overview
+### Context
+In Vietnam's increasingly competitive beverage industry, social media—especially Facebook—plays a critical role in shaping brand image, maintaining awareness, and engaging with the youth segment. Brands like Coca-Cola, Pepsi, and Fanta are not only competing on market share but also investing heavily in digital content to capture attention and build brand loyalty.
 
-This project simulates a real-world marketing analysis challenge by **transforming raw social media data** into valuable insights and brand strategies.
+### Objectives
+This report aims to:
+- Analyze Facebook marketing activities of Coca-Cola, Pepsi, and Fanta in Vietnam.
+- Measure content performance using interaction metrics such as likes, comments, and shares.
+- Identify content strategies and content pillars used by each brand.
+- Provide data-driven recommendations to enhance engagement and brand storytelling on social media.
 
-✅ **Brands analyzed**: Coca-Cola Vietnam, Pepsi Vietnam, and Fanta Vietnam  
-✅ **Platforms**: Facebook (public fan pages)  
-✅ **Timeframe**: November 2024 – March 2025
+### Scope
+- **Time frame**: November 2024 – March 2025  
+- **Platform**: Official Facebook pages of Coca-Cola Vietnam, Pepsi Vietnam, and Fanta Vietnam  
+- **Content**: All public posts published during the research period  
+
+### Methodology
+- **Data Collection**: Facebook post data was collected using Python-based web scraping tools.  
+- **Content Analysis**: Posts were categorized by format (photo, video, status, link), topic, and content pillars.  
+- **Performance Evaluation**: Analyzed by quantitative metrics (likes, shares, comments) and engagement rate.  
+- **Brand Comparison**: Benchmarked brands to assess content effectiveness and social media strategy.
 
 ---
 
